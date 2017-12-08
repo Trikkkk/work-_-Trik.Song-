@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>消息</title>
+</head>
+<body>
+<form method="post" action="/showmessage">
+<div class="with=80%">
+    <table class="table table table-hover">
+
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Message</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="message : ${message}">
+                    <th scope="row" th:text="${message.id}">1</th>
+                    <td th:text="${message.message}"></td>
+
+            </tbody>
+        </table>
+
+
+</div>
+
+
+</form>
+
+</body>
+</html>
